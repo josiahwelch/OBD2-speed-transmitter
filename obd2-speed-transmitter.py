@@ -17,3 +17,6 @@ def __main__:
     while True:
         transmitter.send_speed();
         sleep(0.1);
+
+if __name__ == "__main__":
+    __main__()

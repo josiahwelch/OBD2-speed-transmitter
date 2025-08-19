@@ -13,5 +13,5 @@ class OBD2SpeedGet:
 		return speed
 
 	def get_speed(self):
-		speed = float(get_speed_str())
+		speed = float(self.get_speed_str())
 		return speed

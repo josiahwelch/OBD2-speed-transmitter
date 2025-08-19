@@ -8,10 +8,10 @@ class OBD2SpeedGet:
 		obd = OBD()
 		commands = Commands()
 
+	def get_speed_str(self):
+		speed = str(connection.query(commands.SPEED).value).split(' ')[0]
+		return speed
+
 	def get_speed(self):
 		speed = float(get_speed_str())
-		return speed
-    
-    def get_speed_str(self):
-        speed = str(connection.query(commands.SPEED).value).split(' ')[0]
 		return speed

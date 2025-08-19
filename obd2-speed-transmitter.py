@@ -10,7 +10,7 @@ class OBD2SpeedTransmitter:
         self.obd2_speed_get = OBD2SpeedGet()
 
     def send_speed(self):
-        self.ser.write(self.get_speed_str() + '\n')
+        self.ser.write(self.ser.get_speed_str() + '\n')
 
 def __main__():
     transmitter = OBD2SpeedTransmitter("/dev/ttyUSB0")

@@ -122,6 +122,12 @@ def temp(messages):
     v = v - 40
     return Unit.Quantity(v, Unit.celsius)  # non-multiplicative unit
 
+# -40 to 419 F
+def normal_temp(messages):
+    d = messages[0].data[2:]
+    v = bytes_to_int(d)
+    v = v - 40
+    return Unit.Quantity(v, Unit.fahrenheit)  # non-multiplicative unit in imperial
 
 # -128 to 128 mA
 def current_centered(messages):

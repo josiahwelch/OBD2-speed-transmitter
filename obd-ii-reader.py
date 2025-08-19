@@ -3,8 +3,11 @@
 from obd.obd import OBD
 from obd.commands import Commands
 
-connection = OBD()
-commands = Commands()
+class OBD2SpeedGet:
+	def __init__():
+		obd = OBD()
+		commands = Commands()
 
-while True:
-	print(connection.query(commands.SPEED.decode))
+	def get_speed(self):
+		speed = float(str(connection.query(commands.SPEED).value).split(' ')[0])
+		return speed

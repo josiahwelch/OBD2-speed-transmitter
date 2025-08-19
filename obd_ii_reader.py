@@ -4,10 +4,14 @@ from obd.obd import OBD
 from obd.commands import Commands
 
 class OBD2SpeedGet:
-	def __init__():
+	def __init__(self):
 		obd = OBD()
 		commands = Commands()
 
 	def get_speed(self):
-		speed = float(str(connection.query(commands.SPEED).value).split(' ')[0])
+		speed = float(get_speed_str())
+		return speed
+    
+    def get_speed_str(self):
+        speed = str(connection.query(commands.SPEED).value).split(' ')[0]
 		return speed

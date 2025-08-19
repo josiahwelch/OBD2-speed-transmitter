@@ -5,7 +5,7 @@
 # OBD-ii speed transmitter for NU-ROVE
 
 from serial import Serial
-import time
+from time import sleep
 from obd_ii_reader import OBD2SpeedGet
 
 class OBD2SpeedTransmitter:

@@ -1,4 +1,6 @@
-#!/bin/python3
+# Josiah Welch
+# 8/18/2025
+# OBD-ii speed getter for NU-ROVE
 
 from obd.obd import OBD
 from obd.commands import Commands

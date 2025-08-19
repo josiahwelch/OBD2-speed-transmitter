@@ -11,7 +11,7 @@ class OBD2SpeedGet:
 		commands = Commands()
 
 	def get_speed_str(self):
-		speed = str(obd.query(commands.SPEED).value).split(' ')[0]
+		speed = str(self.obd.query(commands.SPEED).value).split(' ')[0]
 		return speed
 
 	def get_speed(self):

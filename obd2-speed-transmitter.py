@@ -1,5 +1,9 @@
 #!/bin/python3
 
+# Josiah Welch
+# 8/18/2025
+# OBD-ii speed transmitter for NU-ROVE
+
 from serial import Serial
 import time
 from obd_ii_reader import OBD2SpeedGet

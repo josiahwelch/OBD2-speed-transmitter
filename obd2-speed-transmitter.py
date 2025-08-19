@@ -1,18 +1,18 @@
 #!/bin/python3
 
-import pyserial
+import serial
 import time
-from obd-ii-reader import OBD2SpeedGet
+from obd_ii_reader import OBD2SpeedGet
 
 class OBD2SpeedTransmitter:
-	__init__(com_port, baudrate=9600, timeout=0.5):
-        self.ser = Serial(port=com_port, baudrate, timeout)
+    def __init__(com_port, baudrate=9600, timeout=0.5):
+        self.ser = Serial(port=com_port, baudrate=baudrate, timeout=timeout)
         self.obd2_speed_get = OBD2SpeedGet()
 
     def send_speed():
         self.ser.write(self.get_speed_str() + '\n')
 
-def __main__:
+def __main__():
     transmitter = OBD2SpeedTransmitter("/dev/ttyUSB0")
     while True:
         transmitter.send_speed();
